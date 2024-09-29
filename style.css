@@ -24,7 +24,7 @@ body {
   padding: 10px 40px;
   font-size: 18px;
   font-weight: 600;
-  background-color: #da70d6;
+  background-color: #00fa9a;
   border: 0;
   border-radius: 30px;
   cursor: pointer;
@@ -32,12 +32,12 @@ body {
 }
 
 .btn-contato button:hover {
-  box-shadow: 0px 0px 8px #da70d6;
+  box-shadow: 0px 0px 8px #00fa9a;
   transform: scale(1.1);
 }
 
 .rodape {
-  background-color: #7b68ee;
+  background-color: #e6e6fa;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   width: calc(100% - 20px);
@@ -88,7 +88,7 @@ header nav ul li {
   padding: 0 40px;
 }
 
-/* ESTILO DO TOPO DO SITE */
+/* ESTILO DA PÁGINA HOME */
 section.topo-do-site {
   padding: 40px 4%;
 }
@@ -102,11 +102,12 @@ section.topo-do-site .flex {
 .topo-do-site h1 {
   color: #fffafa;
   font-size: 42px;
-  line-height: 40px;
+  line-height: 48px;
 }
 
 .topo-do-site .txt-topo-site h1 span {
-  color: #7b68ee;
+  color: #ff00ff;
+  display: block;
 }
 
 .topo-do-site .txt-topo-site p {
@@ -147,7 +148,7 @@ section.bio .flex {
 }
 
 .bio .sobre h1 span {
-  color: #7b68ee;
+  color: #ff1493;
 }
 
 .bio .sobre p {
@@ -161,7 +162,7 @@ section.bio .flex {
 }
 
 .img-sobre img {
-  border: 2px solid #7b68ee;
+  border: 2px solid #ff1493;
 }
 
 .img-about {
@@ -171,11 +172,18 @@ section.bio .flex {
 }
 
 .img-about img {
-  border: 2px solid #7b68ee;
   margin: 40px 0;
   display: inline-block;
 }
-
+.img-speaker {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre as imagens */
+}
+.img-speaker img {
+  margin: 40px 0;
+  display: inline-block;
+}
 .about p {
   color: #fffafa;
   margin: 40px 0;
@@ -203,7 +211,6 @@ section.resumo .flex {
 }
 
 .resumo .img-resumo img {
-  border: 2px solid #7b68ee;
   position: relative;
   justify-content: flex-start;
 }
@@ -234,10 +241,10 @@ section.especialidade .flex {
 }
 
 .especialidade .especialidade-box {
-  color: #da70d6;
+  color: #7b68ee;
   padding: 40px;
   border-radius: 20px;
-  border: 2px solid #da70d6;
+  border: 2px solid #7b68ee;
   flex: 1 1 48%; /* Ocupa 48% da largura da tela, permitindo duas caixas lado a lado */
   background-color: #1e1e1e; /* Cor de fundo para contraste */
   box-sizing: border-box; /* Inclui padding e border no tamanho total da caixa */
@@ -261,7 +268,7 @@ section.especialidade .flex {
 }
 
 .especialidade .especialidade-box h3 {
-  color: #da70d6;
+  color: #7b68ee;
   font-size: 24px;
   margin: 10px 0;
   text-align: center;
@@ -274,4 +281,26 @@ section.especialidade .flex {
   .especialidade .especialidade-box {
     flex: 1 1 100%; /* Em telas menores, as caixas ocupam 100% da largura */
   }
+}
+
+/* ESTILO PÁGINA PROJETOS */
+section .projeto {
+  padding: 40px 4%;
+}
+
+.projeto .menu h1 {
+  color: #00bfff;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+/* ESTILO PÁGINA LINKS E TALS */
+section .link {
+  padding: 40px 4%;
+}
+
+.link .links h1 {
+  color: #ff8c00;
+  font-size: 42px;
+  line-height: 40px;
 }
