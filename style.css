@@ -9,6 +9,7 @@
 body {
   background-color: black;
   height: 100vh;
+  padding-bottom: 40px;
 }
 
 .interface {
@@ -36,14 +37,55 @@ body {
   transform: scale(1.1);
 }
 
+/* Estilos para o rodapé */
 .rodape {
-  background-color: #e6e6fa;
+  background-color: #e6e6fa; /* Cor de fundo sutil */
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin: 0px;
-  text-align: center;
+  width: 100%;
+  padding: 5px 20px; /* Reduzido para deixar o rodapé mais fino */
+  display: flex;
+  justify-content: space-between; /* Alinha os contatos à esquerda e o copyright à direita */
+  align-items: center; /* Centraliza verticalmente os itens */
+  position: relative; /* Removido o 'fixed' */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar um efeito elegante */
+}
+
+/* Garante que o rodapé fique no final da página */
+.wrapper {
+  min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos 100% da altura da tela */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1; /* Faz o conteúdo crescer para ocupar o espaço disponível */
+}
+
+/* Estilos para os contatos */
+.rodape .contatos {
+  display: flex; /* Alinha os ícones de contato em linha */
+}
+
+.rodape a {
+  margin: 0 10px;
+  color: var(--text-dark);
+}
+
+.rodape img {
+  width: 25px; /* Tamanho reduzido para deixar o rodapé mais fino */
+  height: 25px;
+  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.rodape img:hover {
+  transform: scale(1.1); /* Aumenta levemente o ícone ao passar o mouse */
+}
+
+.rodape p {
+  margin: 0;
+  font-size: 12px; /* Tamanho de fonte menor para deixar o rodapé mais fino */
+  color: #333; /* Cor do texto de copyright */
 }
 
 h2.titulo {
@@ -120,7 +162,14 @@ section.topo-do-site .flex {
   position: relative;
   animation: flutuar 2s ease-in-out infinite alternate;
 }
-
+.btn-social button {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  background-color: #ff1493;
+  cursor: pointer;
+}
 @keyframes flutuar {
   0% {
     top: 0;
@@ -288,19 +337,199 @@ section .projeto {
   padding: 40px 4%;
 }
 
-.projeto .menu h1 {
+section.projeto .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.projeto .desc-projeto h1 {
   color: #00bfff;
   font-size: 42px;
   line-height: 40px;
 }
-
-/* ESTILO PÁGINA LINKS E TALS */
-section .link {
-  padding: 40px 4%;
+.projeto .desc-projeto h1 span {
+  color: #e6e6fa;
 }
 
-.link .links h1 {
+.projeto .desc-projeto p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+section .linkProject {
+  padding: 40px 4%;
+}
+section .linkProject .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+.linkProject .menu h2 {
+  color: #e6e6fa;
+  font-size: 42px;
+  line-height: 40px;
+}
+.linkProject .menu h2 span {
+  color: #00bfff;
+}
+.linkProject .menu p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.linkProject .menu a {
+  color: #e6e6fa;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.linkProject .menu a:hover {
+  color: #00bfff;
+  transform: scale(1.1);
+}
+.linkProject .menu nav ul {
+  list-style-type: none;
+}
+
+.linkProject .menu nav ul li {
+  padding: 0 40px;
+}
+
+/* ESTILO PÁGINA QUICK COMMAND */
+section .doc-qc {
+  padding: 40px 4%;
+}
+section .doc-qc .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.doc-qc .quick-command h1 {
   color: #ff8c00;
   font-size: 42px;
   line-height: 40px;
 }
+
+.doc-qc .quick-command h1 span {
+  color: #e6e6fa;
+}
+
+.doc-qc .quick-command h3 {
+  color: #e6e6fa;
+  font-size: 32px;
+  line-height: 30px;
+}
+
+.doc-qc .quick-command h3 span {
+  color: #ff8c00;
+}
+
+.doc-qc .quick-command p span {
+  color: #ff8c00;
+}
+
+.doc-qc .quick-command h4 {
+  color: #fffafa;
+  font-size: 22px;
+  line-height: 20px;
+}
+
+.doc-qc .quick-command p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.doc-qc .quick-command li {
+  list-style-type: none;
+  color: #ff8c00;
+  text-indent: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.doc-qc .quick-command a {
+  color: #e6e6fa;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.doc-qc .quick-command a:hover {
+  color: #ff8c00;
+  transform: scale(1.1);
+}
+
+section .exqc {
+  padding: 40px 4%;
+}
+section .exqc .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+.exqc h2 {
+  color: #ff8c00;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.exqc h2 span {
+  color: #e6e6fa;
+}
+
+.exqc h3 {
+  padding: 40px 4%;
+  color: #e6e6fa;
+  font-size: 32px;
+  line-height: 30px;
+}
+
+.exqc .ex-prompt h3 span {
+  color: #ff8c00;
+}
+.exqc .ex-prompt .code-block {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f5fffa;
+}
+.exqc .ex-prompt h4 {
+  color: #fffafa;
+  font-size: 22px;
+  line-height: 20px;
+}
+
+.exqc .ex-prompt .code-block pre {
+  background-color: #f5fffa;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.exqc .ex-prompt .copy-button {
+  background-color: #001f4c;
+  color: #ff6633;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+/* ESTILO PÁGINA LINKS E TALS */
