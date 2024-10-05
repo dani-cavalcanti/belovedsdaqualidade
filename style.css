@@ -100,6 +100,10 @@ h2.titulo span {
 }
 
 /* ESTILO DO CABEÇALHO */
+.menu-desktop {
+  display: block;
+}
+
 header {
   padding: 40px 4%;
 }
@@ -108,6 +112,10 @@ header > .interface {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.logo img {
+  max-height: 60px; /* Ajuste a altura da logo conforme necessário */
 }
 
 header a {
@@ -125,9 +133,78 @@ header nav ul {
   list-style-type: none;
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
   display: inline-block;
   padding: 0 40px;
+}
+
+/* ESTILO MENU MOBILE */
+.btn-abrir {
+  display: none;
+  margin-left: auto;
+}
+.btn-abrir i {
+  color: #ff1493;
+  font-size: 40px;
+}
+
+.menu-mobile {
+  background-color: #333;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+  transition: 0.5s;
+  display: none;
+}
+
+.menu-mobile.abrir-menu {
+  width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+  display: block;
+}
+
+.menu-mobile .btn-fechar {
+  padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+  color: #ff1493;
+  font-size: 30px;
+}
+
+.menu-mobile nav ul {
+  text-align: right;
+}
+
+.menu-mobile nav ul li a {
+  color: #e6e6fa;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 8%;
+  display: block;
+  text-decoration: none;
+}
+
+.menu-mobile nav ul li a:hover {
+  background-color: #ff1493;
+  color: #1e1e1e;
+}
+
+.overlay-menu {
+  background-color: #1e1e1e9d;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
 }
 
 /* ESTILO DA PÁGINA HOME */
@@ -162,14 +239,7 @@ section.topo-do-site .flex {
   position: relative;
   animation: flutuar 2s ease-in-out infinite alternate;
 }
-.btn-social button {
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  border: none;
-  background-color: #ff1493;
-  cursor: pointer;
-}
+
 @keyframes flutuar {
   0% {
     top: 0;
@@ -324,12 +394,6 @@ section.especialidade .flex {
 }
 .especialidade .especialidade-box h3 span {
   color: #fffafa;
-}
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .especialidade .especialidade-box {
-    flex: 1 1 100%; /* Em telas menores, as caixas ocupam 100% da largura */
-  }
 }
 
 /* ESTILO PÁGINA PROJETOS */
@@ -533,3 +597,207 @@ section .exqc .flex {
   margin-left: 10px;
 }
 /* ESTILO PÁGINA LINKS E TALS */
+
+/* ESTILO DE RESPONSIVIDADE */
+@media screen and (max-width: 1020px) {
+  /* Esconder o menu desktop em telas menores */
+  .menu-desktop {
+    display: none;
+  }
+
+  /* Mostrar o botão de abrir o menu mobile em telas menores */
+  .btn-abrir {
+    display: block;
+  }
+
+  /* Mostrar o menu mobile em telas menores */
+  .menu-mobile {
+    display: block;
+  }
+
+  /* CLASSES GERAIS */
+  .flex {
+    flex-direction: column-reverse;
+  }
+
+  .rodape {
+    flex-direction: row; /* Mantém os itens em linha */
+    justify-content: space-between; /* Garante que os itens fiquem nas extremidades */
+    text-align: left; /* Mantém o alinhamento à esquerda */
+    padding: 10px 20px; /* Aumenta o padding para dar mais espaço em telas menores */
+  }
+
+  .rodape .contatos {
+    justify-content: flex-start; /* Mantém os contatos à esquerda */
+    gap: 10px;
+  }
+
+  .rodape p {
+    font-size: 10px; /* Reduz o tamanho da fonte para telas menores */
+    text-align: right; /* Garante que o copyright fique à direita */
+  }
+
+  .rodape img {
+    width: 20px; /* Reduz o tamanho dos ícones em telas menores */
+    height: 20px;
+  }
+
+  /* CABEÇALHO */
+  .menu-desktop {
+    display: none;
+  }
+
+  /* HOME */
+  section.topo-do-site {
+    padding: 20px 8%;
+  }
+
+  section.topo-do-site .flex {
+    gap: 40px;
+  }
+
+  .topo-do-site h1 {
+    font-size: 32px;
+  }
+
+  .topo-do-site .img-topo-site img {
+    width: 100%; /* Ajusta a imagem para ocupar 100% da largura no mobile */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela no mobile */
+  }
+
+  /* ESTILO DA PÁGINA SOBRE */
+  section.bio {
+    padding: 20px 8%; /* Aumenta o padding lateral para dar mais espaço nas bordas */
+  }
+
+  section.bio .flex {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    gap: 40px; /* Reduz o gap entre os elementos */
+  }
+
+  .sobre h1 {
+    font-size: 32px; /* Reduz o tamanho da fonte para telas menores */
+    line-height: 36px;
+  }
+
+  .bio .sobre p,
+  .about p,
+  .resumo p {
+    margin: 20px 0; /* Reduz o espaçamento vertical */
+    line-height: 26px; /* Ajusta a altura da linha para melhor legibilidade */
+    text-indent: 20px; /* Reduz o recuo do parágrafo */
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  section.resumo .flex {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    gap: 30px; /* Reduz o gap entre os elementos */
+  }
+
+  .img-about,
+  .img-speaker {
+    flex-direction: column; /* Empilha as imagens verticalmente */
+    align-items: center; /* Centraliza as imagens */
+  }
+
+  .img-about img,
+  .img-speaker img {
+    margin: 20px 0; /* Ajusta o espaçamento vertical entre as imagens */
+    width: 100%; /* Ajusta a largura das imagens para caber na tela */
+    max-width: 300px; /* Define um limite máximo para a largura das imagens */
+  }
+  .resumo .img-resumo img {
+    width: 100%;
+  }
+
+  /* ESTILO DA PÁGINA ESPECIALIDADES */
+  section .especialidade {
+    padding: 20px 2%;
+  }
+
+  section.especialidade .flex {
+    gap: 40px;
+  }
+
+  .especialidade .especialidade-box {
+    flex: 1 1 100%; /* Em telas menores, as caixas ocupam 100% da largura */
+  }
+
+  /* ESTILO DA PÁGINA PROJETO */
+  section .projeto,
+  section .linkProject,
+  section .doc-qc,
+  section .exqc {
+    padding: 20px 2%;
+  }
+
+  section .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .doc-qc .quick-command img {
+    width: 100%; /* A imagem ocupará 100% da largura do contêiner em telas menores */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .projeto .desc-projeto h1,
+  .linkProject .menu h2,
+  .doc-qc .quick-command h1,
+  .exqc h2 {
+    font-size: 32px;
+    line-height: 35px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .projeto .desc-projeto p,
+  .linkProject .menu p,
+  .doc-qc .quick-command p,
+  .exqc h3 {
+    font-size: 16px;
+    line-height: 34px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .doc-qc .quick-command h3,
+  .exqc h3 {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .doc-qc .quick-command h4,
+  .exqc .ex-prompt h4 {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .doc-qc .quick-command li {
+    font-size: 14px;
+    text-indent: 20px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .exqc .ex-prompt .copy-button {
+    padding: 6px 12px;
+  }
+}

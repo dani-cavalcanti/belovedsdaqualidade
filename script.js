@@ -1,18 +1,42 @@
-// Função para navegação dinâmica
-document.querySelectorAll("nav a").forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const page = this.getAttribute("href");
-    fetch(page)
-      .then((response) => response.text())
-      .then((html) => {
-        document.querySelector("main").innerHTML = html;
-        // Reaplica a funcionalidade de copiar código após o carregamento dinâmico
-        applyCopyButtonFunctionality();
-      })
-      .catch((error) => console.error("Erro ao carregar a página:", error));
-  });
-});
+fetch("menu.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("menu-container").innerHTML = data;
+
+    // Seleciona os elementos do menu mobile
+    const btnAbrir = document.getElementById("btn-menu");
+    const btnFechar = document.getElementById("btn-fechar");
+    const menuMobile = document.getElementById("menu-mobile");
+    const overlayMenu = document.getElementById("overlay-menu");
+    const menuLinks = document.querySelectorAll(".menu-mobile nav ul li a");
+
+    // Função para abrir o menu mobile
+    btnAbrir.addEventListener("click", () => {
+      menuMobile.classList.add("abrir-menu");
+      overlayMenu.style.display = "block";
+    });
+
+    // Função para fechar o menu mobile
+    btnFechar.addEventListener("click", () => {
+      menuMobile.classList.remove("abrir-menu");
+      overlayMenu.style.display = "none";
+    });
+
+    // Fechar o menu mobile ao clicar no overlay
+    overlayMenu.addEventListener("click", () => {
+      menuMobile.classList.remove("abrir-menu");
+      overlayMenu.style.display = "none";
+    });
+
+    // Fechar o menu mobile ao clicar em qualquer link do menu
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuMobile.classList.remove("abrir-menu");
+        overlayMenu.style.display = "none";
+      });
+    });
+  })
+  .catch((error) => console.error("Erro ao carregar o menu:", error));
 
 // Função para copiar código
 function applyCopyButtonFunctionality() {
