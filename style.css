@@ -124,7 +124,7 @@ header nav.menu-desktop ul li {
   margin-left: auto;
 }
 .btn-abrir i {
-  color: #ff1493;
+  color: #8a2be2;
   font-size: 40px;
 }
 
@@ -154,7 +154,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile .btn-fechar i {
-  color: #ff1493;
+  color: #8a2be2;
   font-size: 30px;
 }
 
@@ -172,7 +172,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile nav ul li a:hover {
-  background-color: #ff1493;
+  background-color: #8a2be2;
   color: #1e1e1e;
 }
 
