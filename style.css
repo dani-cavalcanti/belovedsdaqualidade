@@ -124,7 +124,7 @@ header nav.menu-desktop ul li {
   margin-left: auto;
 }
 .btn-abrir i {
-  color: #8a2be2;
+  color: #7b68ee;
   font-size: 40px;
 }
 
@@ -154,7 +154,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile .btn-fechar i {
-  color: #8a2be2;
+  color: #7b68ee;
   font-size: 30px;
 }
 
@@ -172,7 +172,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile nav ul li a:hover {
-  background-color: #8a2be2;
+  background-color: #7b68ee;
   color: #1e1e1e;
 }
 
@@ -405,6 +405,11 @@ section.projeto .flex {
   font-weight: 200;
 }
 
+.img-projeto {
+  border-radius: 20px;
+  border: 2px solid #00bfff;
+}
+
 section .linkProject {
   padding: 40px 4%;
 }
@@ -500,7 +505,6 @@ section .doc-qc .flex {
 
 .doc-qc .quick-command li {
   list-style-type: none;
-  color: #ff8c00;
   text-indent: 40px;
   font-size: 16px;
   line-height: 1.5;
@@ -595,8 +599,8 @@ section .exqc .flex {
 
 .popup {
   visibility: hidden;
-  background-color: #4caf50;
-  color: white;
+  background-color: #ff4500;
+  color: #1e1e1e;
   text-align: center;
   border-radius: 5px;
   padding: 10px;
@@ -636,6 +640,82 @@ section .exqc .flex {
 }
 
 /* ESTILO PÁGINA LINKS E TALS */
+section .link {
+  padding: 40px 4%;
+}
+
+section.link .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.link .desc-link h1 {
+  color: #00ff00;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.link .desc-link h1 span {
+  color: #e6e6fa;
+}
+
+.link .desc-link p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+section .linkList {
+  padding: 40px 4%;
+}
+section .linkList .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+.linkList .lista h2 {
+  color: #e6e6fa;
+  font-size: 42px;
+  line-height: 40px;
+}
+.linkList .lista h2 span {
+  color: #00ff00;
+}
+.linkList .lista p {
+  color: #e6e6fa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.linkList .lista p span {
+  color: #00ff00;
+}
+
+.linkList .lista a {
+  color: #e6e6fa;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.linkList .lista a:hover {
+  color: #00ff00;
+  transform: scale(1.1);
+}
+.linkList .lista nav ul {
+  list-style-type: none;
+}
+
+.linkList .lista nav ul li {
+  padding: 0 40px;
+}
 
 /* ESTILO DE RESPONSIVIDADE */
 @media screen and (max-width: 1020px) {
@@ -836,7 +916,63 @@ section .exqc .flex {
     padding: 0 15px;
   }
 
-  .exqc .ex-prompt .copy-button {
+  .exqc {
     padding: 6px 12px;
+  }
+
+  /* Estilo para a caixa de código */
+  .code-block {
+    border-radius: 5px;
+    margin-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* ESTILO PÁGINA LINKS E TALS */
+  section .link,
+  .desc-link {
+    padding: 20px 2%;
+  }
+
+  section .flex {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .link .desc-link h1,
+  .linkList .lista h2 {
+    font-size: 32px;
+    line-height: 35px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .link .desc-link p {
+    color: #fffafa;
+    margin: 20px 0;
+    line-height: 28px;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+  }
+
+  .linkList .lista p {
+    font-size: 16px;
+    line-height: 34px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .linkList .lista li {
+    font-size: 14px;
+    text-indent: 20px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
   }
 }

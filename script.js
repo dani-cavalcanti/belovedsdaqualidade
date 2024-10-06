@@ -39,19 +39,28 @@ fetch("menu.html")
   .catch((error) => console.error("Erro ao carregar o menu:", error));
 
 // Função para copiar código
-// Seleciona todos os elementos com a classe 'copyable'
-const copyableElements = document.querySelectorAll(".copyable");
+// Seleciona todos os elementos com a classe 'code-block'
+const codeBlocks = document.querySelectorAll(".code-block");
 
 // Adiciona o evento de clique a cada elemento
-copyableElements.forEach(function (element) {
-  element.addEventListener("click", function () {
-    // Seleciona o texto dentro do <code>
-    const text = this.innerText;
+codeBlocks.forEach(function (codeBlock) {
+  codeBlock.addEventListener("click", function () {
+    // Seleciona o elemento <code> dentro da code-block
+    const codeElement = this.querySelector("code");
 
-    // Copia o texto para a área de transferência
-    navigator.clipboard
-      .writeText(text)
-      .then(function () {
+    // Cria uma range para selecionar o texto dentro do <code>
+    const range = document.createRange();
+    range.selectNodeContents(codeElement); // Seleciona o conteúdo do <code>
+
+    // Limpa qualquer seleção anterior e seleciona o novo range
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    try {
+      // Copia o texto selecionado para a área de transferência
+      const successful = document.execCommand("copy");
+      if (successful) {
         // Exibe o popup de confirmação
         const popup = document.getElementById("popup");
         popup.classList.add("show");
@@ -60,9 +69,14 @@ copyableElements.forEach(function (element) {
         setTimeout(function () {
           popup.classList.remove("show");
         }, 3000);
-      })
-      .catch(function (err) {
-        console.error("Erro ao copiar o texto: ", err);
-      });
+      } else {
+        console.error("Falha ao copiar o texto.");
+      }
+    } catch (err) {
+      console.error("Erro ao copiar o texto: ", err);
+    }
+
+    // Limpa a seleção
+    selection.removeAllRanges();
   });
 });
