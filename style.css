@@ -407,7 +407,6 @@ section.projeto .flex {
 
 .img-projeto {
   border-radius: 20px;
-  border: 2px solid #00bfff;
 }
 
 section .linkProject {
@@ -639,6 +638,80 @@ section .exqc .flex {
   }
 }
 
+/* ESTILO PÁGINA NEWMAN */
+section .postman {
+  padding: 40px 4%;
+}
+section .postman .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.postman .newman h1 {
+  color: #98fb98;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.postman .newman h1 span {
+  color: #e6e6fa;
+}
+
+.postman .newman h3 {
+  color: #98fb98;
+  font-size: 32px;
+  line-height: 30px;
+}
+
+.postman .newman h3 span {
+  color: #e6e6fa;
+}
+
+.postman .newman p span {
+  color: #98fb98;
+}
+
+.postman .newman a {
+  color: #3cb371;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.postman .newman a:hover {
+  color: #98fb98;
+  transform: scale(1.1);
+}
+
+.postman .newman h4 {
+  color: #3cb371;
+  font-size: 22px;
+  line-height: 20px;
+}
+
+.postman .newman p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.postman .newman img {
+  display: block;
+  margin: 0 auto;
+}
+.postman .newman .note {
+  border-left: 3px solid #98fb98; /* Borda um pouco menor */
+  background-color: #f1f5f9;
+  padding: 5px; /* Reduzido o padding */
+  margin: 5px 0; /* Reduzido o espaçamento */
+  font-style: italic;
+  font-size: 0.9em; /* Texto um pouco menor */
+}
+
 /* ESTILO PÁGINA LINKS E TALS */
 section .link {
   padding: 40px 4%;
@@ -651,7 +724,7 @@ section.link .flex {
 }
 
 .link .desc-link h1 {
-  color: #00ff00;
+  color: #f08080;
   font-size: 42px;
   line-height: 40px;
 }
@@ -683,7 +756,7 @@ section .linkList .flex {
   line-height: 40px;
 }
 .linkList .lista h2 span {
-  color: #00ff00;
+  color: #f08080;
 }
 .linkList .lista p {
   color: #e6e6fa;
@@ -695,7 +768,7 @@ section .linkList .flex {
 }
 
 .linkList .lista p span {
-  color: #00ff00;
+  color: #f08080;
 }
 
 .linkList .lista a {
@@ -706,7 +779,7 @@ section .linkList .flex {
 }
 
 .linkList .lista a:hover {
-  color: #00ff00;
+  color: #f08080;
   transform: scale(1.1);
 }
 .linkList .lista nav ul {
@@ -858,7 +931,7 @@ section .linkList .flex {
     gap: 20px;
   }
 
-  .doc-qc .quick-command img {
+  .img-projeto .doc-qc .quick-command img {
     width: 100%; /* A imagem ocupará 100% da largura do contêiner em telas menores */
     height: auto; /* Mantém a proporção da imagem */
   }
@@ -928,6 +1001,58 @@ section .linkList .flex {
     cursor: pointer;
   }
 
+  /* ESTILO PÁGINA NEWMAN */
+  section .postman {
+    padding: 20px 2%;
+  }
+
+  section .postman .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .postman .newman img {
+    width: 100%; /* A imagem ocupará 100% da largura do contêiner em telas menores */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .postman .newman h1,
+  .postman .newman h2 {
+    font-size: 32px;
+    line-height: 35px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .postman .newman p {
+    font-size: 16px;
+    line-height: 34px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .postman .newman h3 {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .postman .newman h4 {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
   /* ESTILO PÁGINA LINKS E TALS */
   section .link,
   .desc-link {
@@ -937,6 +1062,11 @@ section .linkList .flex {
   section .flex {
     flex-direction: column-reverse;
     gap: 20px;
+  }
+
+  .img-link {
+    width: 100%; /* Ajusta a imagem para ocupar 100% da largura no mobile */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela no mobile */
   }
 
   .link .desc-link h1,
