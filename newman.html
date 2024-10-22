@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M9KN29P2');</script>
+    <!-- End Google Tag Manager -->
+    <meta
+      name="description"
+      content="Página com projetos criados por Dani Cavalcanti"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FIM GOOGLE FONTS -->
+    <!-- BOOTSTRAP ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- FIM BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <title>Automação de API com Postman + Newman</title>
+  </head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2KQS73CE9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2KQS73CE9');
+</script>
+  <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9KN29P2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="menu-container"></div>
+
+    <div class="wrapper">
+      <main class="content">
+        <section class="postman">
+          <div class="interface">
+            <div class="flex">
+              <div class="newman">
+                <h1><span>Automação de API</span> com Postman + Newman</h1>
+                <p>
+                  Pensando em compartilhar cada vez mais do meu dia a dia como
+                  QA, aqui falo como elevar o nível dos testes de API utilizando
+                  o Newman, que é uma ferramenta poderosa para reportar seus
+                  testes lá no Postman.
+                </p>
+                <p>
+                  Antes de tudo, é preciso que se faça algumas instalações.
+                  Então vamos lá!
+                </p>
+
+                <h3>Instalando <span>o Node.js</span></h3>
+                <p>
+                  Faça o download do Node.js
+                  <strong
+                    ><a href="https://nodejs.org/en/download/package-manager"
+                      >aqui</a
+                    ></strong
+                  >
+                </p>
+                <img src="./img/downloadNode.png" />
+                <div class="note">
+                  <em
+                    ><strong
+                      >Neste caso, estou diminuindo o processo de instalação
+                      para Windows, mas é possível instalar em outro SO.</strong
+                    ></em
+                  >
+                </div>
+                <p>
+                  O sistema concluirá a instalação em poucos segundos ou minutos
+                  e mostrará a você uma mensagem de sucesso. Clique no botão
+                  <strong>Finish</strong> para fechar o instalador do Node.js.
+                </p>
+                <img src="./img/nodeInstall.png" />
+                <br />
+                <h4>Verificando a instalação do Node.js</h4>
+                <p>
+                  Assim, o processo de instalação é concluído. Agora, você tem
+                  que verificar se o Node.js está instalado com sucesso ou não.
+                  Para verificar a instalação e confirmar se a versão correta
+                  foi instalada, abra o prompt de comando do seu PC e digite o
+                  seguinte comando:
+                  <strong><span>node -- version</span></strong>
+                </p>
+                <img src="./img/nodeVersion.png" />
+                <p>
+                  E para verificar a versão do npm, execute o comando:
+                  <strong><span>npm --version</span></strong>
+                </p>
+                <img src="./img/npmVersion.png" />
+                <div class="note">
+                  <em>
+                    <strong>
+                      Para instalar em Mac ou Linux,
+                      <a
+                        href=" https://kinsta.com/pt/blog/como-instalar-o-node-js/"
+                        >clique aqui</a
+                      ></strong
+                    >
+                  </em>
+                </div>
+                <br />
+                <h3><span>Instalando</span> o Newman</h3>
+                <p>
+                  Para instalar o Newman, abra o prompt de comando do seu PC e
+                  digite o seguinte comando:
+                  <strong><span>npm install –g newman</span></strong>
+                </p>
+                <img src="./img/newman.png" />
+                <p>
+                  Para verificar a instalação e confirmar se a versão correta
+                  foi instalada, abra o prompt de comando do seu PC e digite o
+                  seguinte comando:
+                  <strong><span>newman -- version</span></strong>
+                </p>
+                <img src="./img/newmanVersion.png" />
+                <br />
+                <h4>Instalando o newman-reporter-html</h4>
+                <p>
+                  Para instalar o módulo de geração de relatórios em HTML, abra
+                  o prompt de comando do seu PC e digite o seguinte comando:
+                  <strong
+                    ><span>npm install –g newman-reporter-html</span></strong
+                  >
+                </p>
+                <img src="./img/newmanReport.png" />
+                <br />
+                <h3>
+                  Montando a estrutura do <span>seu teste com o Newman</span>
+                </h3>
+                <p>
+                  Para que seu teste seja realizado de forma limpa e organizada,
+                  sugiro que crie a seguinte estrutura de pastas: TesteNewman*
+                  (Pasta onde ficarão as collections, environments e os reports)
+                  exports_reports (Pasta onde os reports serão salvos) templates
+                  (Onde ficarão os templates do newman-reporter-html. Para dicas
+                  sobre templates customizados
+                  <strong>
+                    <a
+                      href="https://community.postman.com/t/newman-htmlextra-report-customizing/15535)"
+                      >clique aqui.</a
+                    ></strong
+                  >
+                </p>
+                <img src="./img/pastaNewman.png" />
+                <br />
+                <h4>Baixando a Collection a ser testada</h4>
+                <p>
+                  No Postman, execute os seguintes passos para baixar a
+                  collection:
+                </p>
+                <img src="./img/downloadCollection.png" /><br />
+                <img src="./img/exportCollection.png" /><br />
+                <img src="./img/saveCollection.png" /><br />
+                <img src="./img/finishCollection.png" /><br />
+                <br />
+                <h4>Baixando o Environment da Collection</h4>
+                <p>
+                  Caso você possua variáveis de ambiente no Postman, execute os
+                  seguintes passos para baixar o environment:
+                </p>
+                <img src="./img/environment.png" /><br />
+                <img src="./img/environmentSave.png" /><br />
+                <img src="./img/saveEnvironment.png" /><br />
+                <h3>Executando collection via <span>linha de comando</span></h3>
+                <br />
+                <h4>Comandos básicos do Newman:</h4>
+                <p>
+                  <strong>newman run {{caminho_coleção_json}}</strong> (Executa
+                  uma coleção em json);<br />
+
+                  <strong>newman run {{url_da_coleção}}</strong> (Executa uma
+                  coleção via url);<br />
+
+                  <strong
+                    >newman run coleção_Postman.json –e testEnv.json</strong
+                  >
+                  (Executa uma coleção com arquivos de variáveis);<br />
+                </p>
+                <em
+                  ><strong
+                    >Em nosso exemplo aqui eu executarei uma collection com
+                    environment</strong
+                  ></em
+                ><br />
+                <h4>Meu roteiro será basicamente este:</h4>
+                <p>
+                  Abrir o cmd da pasta onde estão a collection e o environment:
+                </p>
+                <img src="./img/testeNewman.png" /><br />
+                <p>
+                  Digitar o comando:
+                  <strong
+                    ><span
+                      >newman run Testes.postman_collection.json -e
+                      Teste_Env.postman_environment.json — reporters cli,html —
+                      reporter-html-template templates/htmlreqres.hbs —
+                      reporter-html-export exports_reports htmlextra —
+                      reporter-htmlextra-title “Testes Postman + Newman”</span
+                    ></strong
+                  >
+                </p>
+                <img src="./img/linhadeComandoNewman.png" /><br />
+                <p>
+                  <strong>Onde:</strong><br />
+
+                  <strong>newman run —</strong> comando para executar a
+                  collection<br />
+
+                  <strong>Testes.postman_collection.json —</strong> nome arquivo
+                  da collection<br />
+
+                  <strong>-e Teste_Env.postman_environment.json — </strong>nome
+                  arquivo com as variáveis de ambiente da collection<br />
+
+                  <strong>— reporters cli,html</strong> — referencia que teremos
+                  dois tipos de reports cli (report em tela) e html (report
+                  salvo)<br />
+
+                  <strong>
+                    — reporter-html-template templates/htmlreqres.hbs —</strong
+                  >
+                  referencia o modelo de template do report html<br />
+
+                  <strong
+                    >— reporter-html-export exports_reports htmlextra —
+                  </strong>
+                  informa em que pasta o report será salvo<br />
+
+                  <strong
+                    >— reporter-htmlextra-title “Testes Postman + Newman”
+                    —</strong
+                  >
+                  Atribui um título ao report html<br />
+                </p>
+                <br />
+                <h4>Report dos testes</h4>
+                <br />
+                <p>Após executar os testes, ele gera dois tipos de reports:</p>
+                <br />
+                <p>
+                  <strong><span>Em tela:</span></strong>
+                </p>
+                <br />
+                <img src="./img/report_tela.png"/><br />
+                <p>
+                  <strong><span>Report html:</span></strong>
+                </p>
+                <img src="./img/report_html.png"></i><br />
+                <h4>Parâmetros opcionais para usar o Newman</h4>
+                <br />
+                <p>
+                  <strong>-h:</strong> Abre o menu de ajuda;<br />
+
+                  <strong>— folder [nome_da_pasta]:</strong> Executa uma pasta
+                  específica de uma coleção;<br />
+
+                  <strong>-e:</strong> Especifica um arquivo de variável de
+                  ambiente JSON;<br />
+
+                  <strong>-d:</strong> Especifica um arquivo de dados (JSON ou
+                  CSV);<br />
+
+                  <strong>-n:</strong> Informa o número de iterações;<br />
+
+                  <strong>— delay-request [número_ms]:</strong>Especifica um
+                  delay de execução entre requisições;<br />
+
+                  <strong>— bail:</strong> Para a execução se um teste
+                  falhar;<br />
+
+                  <strong>— verbose:</strong> Mostra detalhes da execução de
+                  cada request.<br />
+                </p>
+                <br />
+                <p>
+                  Espero que esse guia os ajudem a rodar seus testes de API,
+                  qualquer coisa, tô nas redes ao lado…
+                </p>
+
+                <br />
+              </div>
+            </div>
+            <!--flex-->
+          </div>
+          <!--interface-->
+        </section>
+        <!--about-->
+      </main>
+
+      <footer class="rodape">
+        <div class="contatos">
+          <a
+            href="https://www.linkedin.com/newsletters/beloveds-da-qualidade-6969925473787080705/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/newsletter.png" alt="Ícone de newsletter" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dani-cavalcanti-qa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/linkedin.svg" alt="Ícone do LinkedIn" />
+          </a>
+          <a
+            href="https://www.youtube.com/@qadanicavalcanti"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/youtube.svg" alt="Ícone do YouTube" />
+          </a>
+          <a
+            href="https://www.instagram.com/qadanicavalcanti"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/instagram.png" alt="Ícone do Instagram" />
+          </a>
+        </div>
+        <p>&copy; 2024 QA Dani Cavalcanti</p>
+      </footer>
+    </div>
+    <script>
+      // Carregar o menu.html no container
+      fetch("menu.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("menu-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Erro ao carregar o menu:", error));
+    </script>
+  </body>
+</html>

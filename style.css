@@ -1,0 +1,1169 @@
+/*ESTILO GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  padding-bottom: 40px;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Estilos para o rodapé */
+.rodape {
+  background-color: #e6e6fa; /* Cor de fundo sutil */
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  padding: 5px 20px; /* Reduzido para deixar o rodapé mais fino */
+  display: flex;
+  justify-content: space-between; /* Alinha os contatos à esquerda e o copyright à direita */
+  align-items: center; /* Centraliza verticalmente os itens */
+  position: relative; /* Removido o 'fixed' */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar um efeito elegante */
+}
+
+/* Garante que o rodapé fique no final da página */
+.wrapper {
+  min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos 100% da altura da tela */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1; /* Faz o conteúdo crescer para ocupar o espaço disponível */
+}
+
+/* Estilos para os contatos */
+.rodape .contatos {
+  display: flex; /* Alinha os ícones de contato em linha */
+}
+
+.rodape a {
+  margin: 0 10px;
+  color: var(--text-dark);
+}
+
+.rodape img {
+  width: 25px; /* Tamanho reduzido para deixar o rodapé mais fino */
+  height: 25px;
+  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.rodape img:hover {
+  transform: scale(1.1); /* Aumenta levemente o ícone ao passar o mouse */
+}
+
+.rodape p {
+  margin: 0;
+  font-size: 12px; /* Tamanho de fonte menor para deixar o rodapé mais fino */
+  color: #333; /* Cor do texto de copyright */
+}
+
+h2.titulo {
+  color: #fffafa;
+  font-size: 42px;
+  line-height: 40px;
+  text-align: center;
+}
+
+h2.titulo span {
+  color: #7b68ee;
+}
+
+/* ESTILO DO CABEÇALHO */
+.menu-desktop {
+  display: block;
+}
+
+header {
+  padding: 40px 4%;
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #696969;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+header a:hover {
+  color: azure;
+  transform: scale(1.1);
+}
+header nav ul {
+  list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+  display: inline-block;
+  padding: 0 40px;
+}
+
+/* ESTILO MENU MOBILE */
+.btn-abrir {
+  display: none;
+  margin-left: auto;
+}
+.btn-abrir i {
+  color: #7b68ee;
+  font-size: 40px;
+}
+
+.menu-mobile {
+  background-color: #333;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+  transition: 0.5s;
+  display: none;
+}
+
+.menu-mobile.abrir-menu {
+  width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+  display: block;
+}
+
+.menu-mobile .btn-fechar {
+  padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+  color: #7b68ee;
+  font-size: 30px;
+}
+
+.menu-mobile nav ul {
+  text-align: right;
+}
+
+.menu-mobile nav ul li a {
+  color: #e6e6fa;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 20px 8%;
+  display: block;
+  text-decoration: none;
+}
+
+.menu-mobile nav ul li a:hover {
+  background-color: #7b68ee;
+  color: #1e1e1e;
+}
+
+.overlay-menu {
+  background-color: #1e1e1ec4;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+}
+
+/* ESTILO DA PÁGINA HOME */
+section.topo-do-site {
+  padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.topo-do-site h1 {
+  color: #fffafa;
+  font-size: 42px;
+  line-height: 48px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+  color: #ff00ff;
+  display: block;
+}
+
+.topo-do-site .txt-topo-site p {
+  color: #fffafa;
+  margin: 40px 0;
+  text-align: justify;
+}
+
+.topo-do-site .img-topo-site img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+section .desafio {
+  padding: 40px 4%;
+}
+
+section.desafio .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.desafio .challenge h2 {
+  color: #fffafa;
+  font-size: 42px;
+  line-height: 48px;
+}
+
+.desafio .challenge h2 span {
+  color: #ff00ff;
+}
+
+.desafio .challenge p {
+  color: #fffafa;
+  margin: 40px 0;
+  text-align: justify;
+}
+
+.desafio .challenge a {
+  color: #ff00ff;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.desafio .challenge a:hover {
+  color: #7b68ee;
+  transform: scale(1.1);
+}
+
+.desafio .img-desafio img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* ESTILO DA PÁGINA SOBRE */
+section .bio {
+  padding: 40px 4%;
+}
+
+section.bio .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.sobre h1 {
+  color: #fffafa;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.bio .sobre h1 span {
+  color: #ff1493;
+}
+
+.bio .sobre p {
+  color: #fffafa;
+  margin: 40px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  text-indent: 40px;
+}
+
+.img-sobre img {
+  border: 2px solid #ff1493;
+}
+
+.img-about {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.img-about img {
+  margin: 40px 0;
+  display: inline-block;
+}
+.img-speaker {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre as imagens */
+}
+.img-speaker img {
+  margin: 40px 0;
+  display: inline-block;
+}
+.about p {
+  color: #fffafa;
+  margin: 40px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  text-indent: 40px;
+}
+
+.resumo p {
+  color: #fffafa;
+  margin: 40px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  text-indent: 40px;
+}
+
+section.resumo .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.resumo .img-resumo img {
+  position: relative;
+  justify-content: flex-start;
+}
+
+/* ESTILO DA PÁGINA ESPECIALIDADES */
+section.especialidade {
+  padding: 40px 4%;
+}
+
+section.especialidade .flex {
+  display: flex;
+  justify-content: space-between; /* Espaço entre as caixas */
+  gap: 20px; /* Espaço entre as caixas */
+  flex-wrap: wrap; /* Permite que as caixas quebrem linha em telas menores */
+}
+
+.especialidade p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.especialidade p span {
+  color: #7b68ee;
+}
+
+.especialidade .especialidade-box {
+  color: #7b68ee;
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid #7b68ee;
+  flex: 1 1 48%; /* Ocupa 48% da largura da tela, permitindo duas caixas lado a lado */
+  background-color: #1e1e1e; /* Cor de fundo para contraste */
+  box-sizing: border-box; /* Inclui padding e border no tamanho total da caixa */
+}
+
+.especialidade .especialidade-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px;
+}
+
+.especialidade .especialidade-box .icon-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o ícone e o título */
+}
+
+.especialidade .especialidade-box i {
+  font-size: 50px;
+  color: #fffafa;
+  margin-bottom: 10px; /* Espaço entre o ícone e o título */
+}
+
+.especialidade .especialidade-box h3 {
+  color: #7b68ee;
+  font-size: 24px;
+  margin: 10px 0;
+  text-align: center;
+}
+.especialidade .especialidade-box h3 span {
+  color: #fffafa;
+}
+
+/* ESTILO PÁGINA PROJETOS */
+section .projeto {
+  padding: 40px 4%;
+}
+
+section.projeto .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.projeto .desc-projeto h1 {
+  color: #00bfff;
+  font-size: 42px;
+  line-height: 40px;
+}
+.projeto .desc-projeto h1 span {
+  color: #e6e6fa;
+}
+
+.projeto .desc-projeto p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.img-projeto {
+  border-radius: 20px;
+}
+
+section .linkProject {
+  padding: 40px 4%;
+}
+section .linkProject .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+.linkProject .menu h2 {
+  color: #e6e6fa;
+  font-size: 42px;
+  line-height: 40px;
+}
+.linkProject .menu h2 span {
+  color: #00bfff;
+}
+.linkProject .menu p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.linkProject .menu a {
+  color: #e6e6fa;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.linkProject .menu a:hover {
+  color: #00bfff;
+  transform: scale(1.1);
+}
+.linkProject .menu nav ul {
+  list-style-type: none;
+}
+
+.linkProject .menu nav ul li {
+  padding: 0 40px;
+}
+
+/* ESTILO PÁGINA QUICK COMMAND */
+section .doc-qc {
+  padding: 40px 4%;
+}
+section .doc-qc .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.doc-qc .quick-command h1 {
+  color: #ff8c00;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.doc-qc .quick-command h1 span {
+  color: #e6e6fa;
+}
+
+.doc-qc .quick-command h3 {
+  color: #e6e6fa;
+  font-size: 32px;
+  line-height: 30px;
+}
+
+.doc-qc .quick-command h3 span {
+  color: #ff8c00;
+}
+
+.doc-qc .quick-command p span {
+  color: #ff8c00;
+}
+
+.doc-qc .quick-command h4 {
+  color: #fffafa;
+  font-size: 22px;
+  line-height: 20px;
+}
+
+.doc-qc .quick-command p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.doc-qc .quick-command li {
+  list-style-type: none;
+  text-indent: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.doc-qc .quick-command a {
+  color: #e6e6fa;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.doc-qc .quick-command a:hover {
+  color: #ff8c00;
+  transform: scale(1.1);
+}
+
+section .exqc {
+  padding: 40px 4%;
+}
+section .exqc .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+.exqc h2 {
+  color: #ff8c00;
+  font-size: 38px;
+  line-height: 40px;
+}
+
+.exqc h2 span {
+  color: #e6e6fa;
+}
+
+.exqc h3 {
+  color: #ffa500;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.exqc .ex-prompt h3 span {
+  color: #ff8c00;
+}
+.exqc .ex-prompt .code-block {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f5fffa;
+}
+.exqc h4 {
+  padding: 40px 4%;
+  color: #ff8c00;
+  font-size: 22px;
+  line-height: 20px;
+}
+
+.exqc p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+}
+
+.exqc p span {
+  color: #d2691e;
+}
+
+/* Estilo para a caixa de código */
+.code-block {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Estilo para o conteúdo do código */
+.code-block pre {
+  background-color: #f5f5f5;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  white-space: pre-wrap; /* Permite quebra de linha */
+  word-wrap: break-word; /* Quebra palavras longas */
+}
+
+.popup {
+  visibility: hidden;
+  background-color: #ff4500;
+  color: #1e1e1e;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+}
+
+.popup.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+/* ESTILO PÁGINA NEWMAN */
+section .postman {
+  padding: 40px 4%;
+}
+section .postman .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.postman .newman h1 {
+  color: #98fb98;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.postman .newman h1 span {
+  color: #e6e6fa;
+}
+
+.postman .newman h3 {
+  color: #98fb98;
+  font-size: 32px;
+  line-height: 30px;
+}
+
+.postman .newman h3 span {
+  color: #e6e6fa;
+}
+
+.postman .newman p span {
+  color: #98fb98;
+}
+
+.postman .newman a {
+  color: #3cb371;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.postman .newman a:hover {
+  color: #98fb98;
+  transform: scale(1.1);
+}
+
+.postman .newman h4 {
+  color: #3cb371;
+  font-size: 22px;
+  line-height: 20px;
+}
+
+.postman .newman p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.postman .newman img {
+  display: block;
+  margin: 0 auto;
+}
+.postman .newman .note {
+  border-left: 3px solid #98fb98; /* Borda um pouco menor */
+  background-color: #f1f5f9;
+  padding: 5px; /* Reduzido o padding */
+  margin: 5px 0; /* Reduzido o espaçamento */
+  font-style: italic;
+  font-size: 0.9em; /* Texto um pouco menor */
+}
+
+/* ESTILO PÁGINA LINKS E TALS */
+section .link {
+  padding: 40px 4%;
+}
+
+section.link .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.link .desc-link h1 {
+  color: #f08080;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.link .desc-link h1 span {
+  color: #e6e6fa;
+}
+
+.link .desc-link p {
+  color: #fffafa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+section .linkList {
+  padding: 40px 4%;
+}
+section .linkList .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+.linkList .lista h2 {
+  color: #e6e6fa;
+  font-size: 42px;
+  line-height: 40px;
+}
+.linkList .lista h2 span {
+  color: #f08080;
+}
+.linkList .lista p {
+  color: #e6e6fa;
+  margin: 20px 0;
+  line-height: 28px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.linkList .lista p span {
+  color: #f08080;
+}
+
+.linkList .lista a {
+  color: #e6e6fa;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.linkList .lista a:hover {
+  color: #f08080;
+  transform: scale(1.1);
+}
+.linkList .lista nav ul {
+  list-style-type: none;
+}
+
+.linkList .lista nav ul li {
+  padding: 0 40px;
+}
+
+/* ESTILO DE RESPONSIVIDADE */
+@media screen and (max-width: 1020px) {
+  /* Esconder o menu desktop em telas menores */
+  .menu-desktop {
+    display: none;
+  }
+
+  /* Mostrar o botão de abrir o menu mobile em telas menores */
+  .btn-abrir {
+    display: block;
+  }
+
+  /* Mostrar o menu mobile em telas menores */
+  .menu-mobile {
+    display: block;
+  }
+
+  /* CLASSES GERAIS */
+  .flex {
+    flex-direction: column-reverse;
+  }
+
+  .rodape {
+    flex-direction: row; /* Mantém os itens em linha */
+    justify-content: space-between; /* Garante que os itens fiquem nas extremidades */
+    text-align: left; /* Mantém o alinhamento à esquerda */
+    padding: 10px 20px; /* Aumenta o padding para dar mais espaço em telas menores */
+  }
+
+  .rodape .contatos {
+    justify-content: flex-start; /* Mantém os contatos à esquerda */
+    gap: 10px;
+  }
+
+  .rodape p {
+    font-size: 10px; /* Reduz o tamanho da fonte para telas menores */
+    text-align: right; /* Garante que o copyright fique à direita */
+  }
+
+  .rodape img {
+    width: 20px; /* Reduz o tamanho dos ícones em telas menores */
+    height: 20px;
+  }
+
+  /* CABEÇALHO */
+  .menu-desktop {
+    display: none;
+  }
+
+  /* HOME */
+  section.topo-do-site {
+    padding: 20px 8%;
+  }
+
+  section.topo-do-site .flex {
+    gap: 40px;
+  }
+
+  .topo-do-site h1 {
+    font-size: 32px;
+  }
+
+  .topo-do-site .img-topo-site img {
+    width: 100%; /* Ajusta a imagem para ocupar 100% da largura no mobile */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela no mobile */
+  }
+
+  section.desafio {
+    padding: 20px 8%;
+  }
+
+  section.desafio .flex {
+    gap: 40px;
+  }
+
+  .desafio .challenge h2 {
+    font-size: 32px;
+  }
+
+  .desafio .img-desafio img {
+    flex-direction: column;
+    width: 100%; /* Ajusta a imagem para ocupar 100% da largura no mobile */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela no mobile */
+  }
+
+  /* ESTILO DA PÁGINA SOBRE */
+  section.bio {
+    padding: 20px 8%; /* Aumenta o padding lateral para dar mais espaço nas bordas */
+  }
+
+  section.bio .flex {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    gap: 40px; /* Reduz o gap entre os elementos */
+  }
+
+  .sobre h1 {
+    font-size: 32px; /* Reduz o tamanho da fonte para telas menores */
+    line-height: 36px;
+  }
+
+  .bio .sobre p,
+  .about p,
+  .resumo p {
+    margin: 20px 0; /* Reduz o espaçamento vertical */
+    line-height: 26px; /* Ajusta a altura da linha para melhor legibilidade */
+    text-indent: 20px; /* Reduz o recuo do parágrafo */
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  section.resumo .flex {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    gap: 30px; /* Reduz o gap entre os elementos */
+  }
+
+  .img-about,
+  .img-speaker {
+    flex-direction: column; /* Empilha as imagens verticalmente */
+    align-items: center; /* Centraliza as imagens */
+  }
+
+  .img-about img,
+  .img-speaker img {
+    margin: 20px 0; /* Ajusta o espaçamento vertical entre as imagens */
+    width: 100%; /* Ajusta a largura das imagens para caber na tela */
+    max-width: 300px; /* Define um limite máximo para a largura das imagens */
+  }
+  .resumo .img-resumo img {
+    width: 100%;
+  }
+
+  /* ESTILO DA PÁGINA ESPECIALIDADES */
+  section .especialidade {
+    padding: 20px 2%;
+  }
+
+  section.especialidade .flex {
+    gap: 40px;
+  }
+
+  .especialidade .especialidade-box {
+    flex: 1 1 100%; /* Em telas menores, as caixas ocupam 100% da largura */
+  }
+
+  /* ESTILO DA PÁGINA PROJETO */
+  section .projeto,
+  section .linkProject,
+  section .doc-qc,
+  section .exqc {
+    padding: 20px 2%;
+  }
+
+  section .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .img-projeto .doc-qc .quick-command img {
+    width: 100%; /* A imagem ocupará 100% da largura do contêiner em telas menores */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .projeto .desc-projeto h1,
+  .linkProject .menu h2,
+  .doc-qc .quick-command h1,
+  .exqc h2 {
+    font-size: 32px;
+    line-height: 35px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .projeto .desc-projeto p,
+  .linkProject .menu p,
+  .doc-qc .quick-command p,
+  .exqc h3 {
+    font-size: 16px;
+    line-height: 34px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .doc-qc .quick-command h3,
+  .exqc h3 {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .doc-qc .quick-command h4,
+  .exqc .ex-prompt h4 {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .doc-qc .quick-command li {
+    font-size: 14px;
+    text-indent: 20px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .exqc {
+    padding: 6px 12px;
+  }
+
+  /* Estilo para a caixa de código */
+  .code-block {
+    border-radius: 5px;
+    margin-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* ESTILO PÁGINA NEWMAN */
+  section .postman {
+    padding: 20px 2%;
+  }
+
+  section .postman .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .postman .newman img {
+    width: 100%; /* A imagem ocupará 100% da largura do contêiner em telas menores */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .postman .newman h1,
+  .postman .newman h2 {
+    font-size: 32px;
+    line-height: 35px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .postman .newman p {
+    font-size: 16px;
+    line-height: 34px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .postman .newman h3 {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .postman .newman h4 {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  /* ESTILO PÁGINA LINKS E TALS */
+  section .link,
+  .desc-link {
+    padding: 20px 2%;
+  }
+
+  section .flex {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .img-link {
+    width: 100%; /* Ajusta a imagem para ocupar 100% da largura no mobile */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela no mobile */
+  }
+
+  .link .desc-link h1,
+  .linkList .lista h2 {
+    font-size: 32px;
+    line-height: 35px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .link .desc-link p {
+    color: #fffafa;
+    margin: 20px 0;
+    line-height: 28px;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+  }
+
+  .linkList .lista p {
+    font-size: 16px;
+    line-height: 34px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+
+  .linkList .lista li {
+    font-size: 14px;
+    text-indent: 20px;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 0 15px;
+  }
+}

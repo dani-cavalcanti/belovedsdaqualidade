@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M9KN29P2");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta
+      name="description"
+      content="Página com projetos criados por Dani Cavalcanti"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FIM GOOGLE FONTS -->
+    <!-- BOOTSTRAP ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- FIM BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <title>Meus Projetos</title>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-L2KQS73CE9"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-L2KQS73CE9");
+  </script>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M9KN29P2"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="menu-container"></div>
+
+    <div class="wrapper">
+      <main class="content">
+        <section class="projeto">
+          <div class="interface">
+            <div class="flex">
+              <div class="desc-projeto">
+                <h1><span>Meus</span> Projetos</h1>
+                <p>
+                  Aqui você vai encontrar documentações para utilizar as
+                  ferramentas que apresento em meus conteúdos. Fique à vontade
+                  para explorar e descobrir como elevar a qualidade dos seus
+                  projetos de software!
+                </p>
+              </div>
+              <div class="img-projeto">
+                <img src="img/project.png" alt="Portfolio" />
+              </div>
+            </div>
+            <!--flex-->
+          </div>
+          <!--interface-->
+        </section>
+        <!--bio-->
+        <br />
+        <section class="linkProject">
+          <div class="interface">
+            <div class="flex">
+              <div class="menu">
+                <h2>Lista de<span> Projetos</span></h2>
+                <p>Segue a lista de conteúdos catalogados por assunto:</p>
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="quick-command.html"
+                        >Como criar seu Quick Command</a
+                      >
+                    </li>
+                    <br />
+                    <li>
+                      <a href="newman.html"
+                        >Automação de API com Postman e Newman</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+                <br />
+              </div>
+              <!--about-->
+            </div>
+            <!--flex-->
+          </div>
+          <!--interface-->
+        </section>
+        <!--about-->
+      </main>
+
+      <footer class="rodape">
+        <div class="contatos">
+          <a
+            href="https://www.linkedin.com/newsletters/beloveds-da-qualidade-6969925473787080705/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/newsletter.png" alt="Ícone de newsletter" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dani-cavalcanti-qa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/linkedin.svg" alt="Ícone do LinkedIn" />
+          </a>
+          <a
+            href="https://www.youtube.com/@qadanicavalcanti"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/youtube.svg" alt="Ícone do YouTube" />
+          </a>
+          <a
+            href="https://www.instagram.com/qadanicavalcanti"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/instagram.png" alt="Ícone do Instagram" />
+          </a>
+        </div>
+        <p>&copy; 2024 QA Dani Cavalcanti</p>
+      </footer>
+    </div>
+    <script>
+      // Carregar o menu.html no container
+      fetch("menu.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("menu-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Erro ao carregar o menu:", error));
+    </script>
+  </body>
+</html>
