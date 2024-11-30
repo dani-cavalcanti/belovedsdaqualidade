@@ -198,110 +198,7 @@
             <div class="interface">
                 <h2>Exemplos de Prompts <span>para Quick Commands</span></h2>
                 <p> <em>Nesta seção é possível copiar alguns Quick Commands para que vocês possam usar no dia a dia de vocês, ajustando conforme a necessidade do seu projeto.</em></p>
-                <h3>1 - Cria documentação de qualidade com base nos requisitos</h3>
-                <p> <strong><span>Nome do Quick Command:</span></strong> cria-doc-qualidade-via-requisito</p>
-                <p><strong><span>descrição:</span></strong> Este Quick Command tem por objetivo criar: user story, critérios de aceite, plano de testes e cenários de testes com base na documentação de requisito fornecida.</p>
-                <h4>cria-us-prompt</h4>
-                  <div class="code-block">
-                    <pre><code id="copyable">Sua tarefa é criar a história de usuário, se baseando nos requisitos funcionais do projeto.
-<strong>Instruções:</strong> 
-- Forneça a resposta no formato texto sempre em português brasileiro usando as Keywords:
-  <strong>Quem?</strong> Para quem estamos desenvolvendo a funcionalidade.
-  <strong>O que?</strong> Uma descrição resumida da funcionalidade em si.
-  <strong>Por que?</strong> O motivo pelo qual o cliente precisa desta funcionalidade.
-
-  Se possível citando o valor de negócio obtido,
-- Revisar a história usando o conceito <strong>INVEST</strong>:
-    <strong>Independent</strong> (deve ser independente)
-    <strong>Negotiable</strong> (deve ser negociável)
-    <strong>Valuable</strong> (deve agregar valor para o cliente)
-    <strong>Estimable</strong> (deve ser possível estima-la)
-    <strong>Small</strong> (deve ser pequena)
-    <strong>Testable</strong> (deve ser testável)
-                    </code></pre>
-                  </div>
-                  <div id="popup" class="popup"><strong>Texto copiado!</strong></div>
-
-                  <h4>cria-criterios-de-aceite</h4>
-                  <div class="code-block">
-                      <pre><code id="copyable">
-Escreva os critérios de aceite seguindo as seguintes regras:
-<strong>Clareza e Precisão</strong>
-    Use linguagem clara e específica.
-    Evite ambiguidades e termos vagos.
-<strong>Mensurabilidade</strong>
-    Os critérios devem ser mensuráveis e verificáveis.
-    Inclua métricas ou condições específicas que possam ser testadas.
-<strong>Relevância</strong>
-    Os critérios devem estar diretamente relacionados ao requisito.
-    Evite incluir informações irrelevantes ou desnecessárias.
-<strong>Consistência</strong>
-    Mantenha a consistência com outros requisitos e critérios de aceite.
-    Certifique-se de que não haja conflitos entre os critérios.
- <strong>Completude</strong>
-     Os critérios devem cobrir todos os aspectos importantes do requisito.
-     Garanta que todas as condições necessárias para a aceitação estejam incluídas.
-<strong>Testabilidade</strong>
-     Os critérios devem ser escritos de forma que possam ser testados.
-     Inclua cenários de teste claros e específicos.
-<strong>Acessibilidade</strong>
-     Os critérios devem ser compreensíveis para todas as partes interessadas.
-     Use uma linguagem que seja acessível tanto para desenvolvedores quanto para stakeholders não técnicos.
-<strong>Formato Padrão</strong>
-     Utilize um formato padrão para a escrita dos critérios, como o formato Given-When-Then:
-        <strong>Dado:</strong> a condição inicial.
-        <strong>Quando:</strong> a ação que desencadeia o comportamento.
-        <strong>Então:</strong> o resultado esperado.
-<strong>Validação e Aprovação</strong>
-     Os critérios devem ser validados e aprovados pelas partes interessadas.
-     Inclua um processo de revisão para garantir a aceitação dos critérios.
-<strong>Documentação</strong>
-     Documente os critérios de aceite de forma adequada.
-     Mantenha um registro atualizado e acessível para todos os membros da equipe.
-                      </code></pre>
-                    </div>
-                    <div id="popup" class="popup"><strong>Texto copiado!</strong></div>
-
-                    <h4>cria-plano-de-testes</h4>
-                    <div class="code-block">
-                        <pre><code id="copyable">
-Com base nas regras descritas no Syllabus CTFL-4.0, crie o plano de teste de acordo com as regras abaixo.
-        
-  <strong>1.</strong>Quais atributos da qualidade deverão ser testados?
-  <strong>2.</strong> Quem realizará os testes?
-  <strong>3.</strong> Quais recursos serão utilizados?
-  <strong>4.</strong> Quais as dependências entre os atributos de qualidade?
-  <strong>5.</strong> Quais as dependências entre as atividades de desenvolvimento?
-  <strong>6.</strong> Como o processo e a qualidade do sistema de software serão acompanhados?
-        
-  - Escrever uma documentação aderente as regras de negócio e de fácil entendimento para o time não técnico
-  - Escrever no formato de sentenças e não no formato Gherkin (frases),
-  - Manter a clareza,
-  - Manter a legibilidade,
-  - Fornecer a maior cobertura dos casos,
-  - Escrever critérios funcionais e não funcionais
-                        </code></pre>
-                    </div>
-                    <div id="popup" class="popup"><strong>Texto copiado!</strong></div>
-
-                    <h4>cria-cenario-gherkie</h4>
-                    <div class="code-block">
-                        <pre><code id="copyable"> Sua tarefa é criar cenários de testes com  coesão, concisão, clareza e também se atentando a fluxos alternativos, se baseando na história de usuário criada a partir das regras de negócio fornecidas. 
-  - Definição clara dos objetivos,
-  - Cobertura abrangente,
-  - Reutilização de cenários,
-  - Utilizar as técnicas de testes como Análise de Valor limite, Partição de equivalência, Tabela de decisão e Transição entre status para cenários positivos e alternativos
-  - Forneça a resposta no formato Gherkin em português brasileiro, usando as Keywords descritas na documentação do Cucumber da SmartBear
-  - Utilize o padrão de persona;
-  - Utilize as melhores práticas de Gherkin com Keywords;
-  - Utilize as melhores práticas de Gherkin com Features;
-  - Utilize as melhores práticas de Gherkin com Tags;
-                        </code></pre>
-                    </div>
-                    <div id="popup" class="popup"><strong>Texto copiado!</strong></div>
-                    <br>
-
-                    <h3>2 - Cria documentação de testes para uma classe</h3>
+                    <h3> Cria documentação de testes para uma classe</h3>
                     <p> <strong><span>Nome do Quick Command:</span></strong> cria-testes-para-classe</p>
                     <p><strong><span>descrição:</span></strong> Este Quick Command tem por objetivo criar cenários de testes de acordo com a pirâmide de testes ( testes unitários, testes integrados e testes e2e) para uma determinada classe.</p>
                             
@@ -314,26 +211,41 @@ Com base nas regras descritas no Syllabus CTFL-4.0, crie o plano de teste de aco
                             <h4>cria-teste-unitario</h4>
                             <div class="code-block">
                                     <pre><code id="copyable">Crie testes unitários baseado no  padrão AAA(Arrange, Act, Assert) seguindo as seguintes regras:
-            
-<strong>1. Isolamento:</strong> Cada teste unitário deve isolar uma única unidade de código, como uma função ou método, para garantir que o teste seja específico e preciso.
-<strong>2. Independência:</strong> Os testes unitários devem ser independentes uns dos outros. Isso significa que a execução de um teste não deve depender do resultado de outro.
-<strong>3. Automatização:</strong> Sempre que possível, automatize os testes unitários para aumentar a eficiência e garantir a repetibilidade.
-<strong>4. Cobertura de Código:</strong> Os testes unitários devem cobrir todas as partes críticas do código. Utilize ferramentas de cobertura de código para identificar áreas não testadas.
-<strong>5. Nomenclatura Clara:</strong> Nomeie os testes de forma clara e descritiva para que outros desenvolvedores possam entender facilmente o que está sendo testado.
-<strong>6. Configuração e Limpeza:</strong> Cada teste deve configurar seu próprio ambiente e limpar qualquer estado alterado após a execução. Isso garante que os testes não interfiram uns nos outros.
-<strong>7. Testes de Limite e Equivalência:</strong> Utilize técnicas como análise de valor limite e partição de equivalência para garantir que os testes cubram uma ampla gama de entradas possíveis.
-<strong>8. Mocking e Stubbing:</strong> Utilize mocks e stubs para simular dependências externas e garantir que os testes sejam focados na unidade de código específica.
-<strong>9. Execução Rápida:</strong> Os testes unitários devem ser rápidos para executar, permitindo que sejam executados frequentemente durante o desenvolvimento.
-<strong>10. Documentação:</strong> Documente os testes unitários para que outros desenvolvedores possam entender o propósito e a lógica por trás de cada teste.
+
+            Principais regras do Quality Gate do SonarQube:
+        <strong>Cobertura de Testes: </strong> Um percentual mínimo de cobertura de testes de código deve ser atingido. Isso garante que uma parte significativa do código é testada.
+        <strong>Bugs: </strong> O número de bugs deve ser zero ou abaixo de um determindado limite. Bugs são considerados erros no código que podem causar falhas.
+        <strong>Vulnerabilidade: </strong> O número de vulnerabilidades de segurança dever ser zero ou abaixo de um limite aceitável.
+        <strong>Code Smells: </strong> O número de code smells, que são indicadores de problemas de manutenção de código, deve ser mantido dentro de um limite aceitável.
+        <strong>Débito Técnico: </strong> O débito técnico, que representa o esforço necessário para corrigir problemas no código, deve ser mantido dentro de um limite aceitável.
+        <strong>Complexidade Ciclomática: </strong> A complexidade do código deve ser mantida dentro de limites que garantam a facilidade de manutenção e compreensão.
+        <strong>Duplicação de código: </strong>  O percentual de duplicação de código deve ser bauxi para evitar redundâncias desnecessárias.                       
+    
+            Seguindo ainda essas regras:
+        <strong>1. Isolamento:</strong> Cada teste unitário deve isolar uma única unidade de código, como uma função ou método, para garantir que o teste seja específico e preciso.
+        <strong>2. Independência:</strong> Os testes unitários devem ser independentes uns dos outros. Isso significa que a execução de um teste não deve depender do resultado de outro.
+        <strong>3. Automatização:</strong> Sempre que possível, automatize os testes unitários para aumentar a eficiência e garantir a repetibilidade.
+        <strong>4. Cobertura de Código:</strong> Os testes unitários devem cobrir todas as partes críticas do código. Utilize ferramentas de cobertura de código para identificar áreas não testadas.
+        <strong>5. Nomenclatura Clara:</strong> Nomeie os testes de forma clara e descritiva para que outros desenvolvedores possam entender facilmente o que está sendo testado.
+        <strong>6. Configuração e Limpeza:</strong> Cada teste deve configurar seu próprio ambiente e limpar qualquer estado alterado após a execução. Isso garante que os testes não interfiram uns nos outros.
+        <strong>7. Testes de Limite e Equivalência:</strong> Utilize técnicas como análise de valor limite e partição de equivalência para garantir que os testes cubram uma ampla gama de entradas possíveis.
+        <strong>8. Mocking e Stubbing:</strong> Utilize mocks e stubs para simular dependências externas e garantir que os testes sejam focados na unidade de código específica.
+        <strong>9. Execução Rápida:</strong> Os testes unitários devem ser rápidos para executar, permitindo que sejam executados frequentemente durante o desenvolvimento.
+        <strong>10. Documentação:</strong> Documente os testes unitários para que outros desenvolvedores possam entender o propósito e a lógica por trás de cada teste.
                              </code></pre>
                             </div>
                             <div id="popup" class="popup"><strong>Texto copiado!</strong></div>
 
                             <h4>cria-teste-integrado</h4>
                             <div class="code-block">
-                                    <pre><code id="copyable"> Você deverá criar:
- -uma feature em Gherkin usando Given, When, Then com steps escrito em português para testes de integração e 
--uma classe de validação que contenham os métodos de validação de cada um dos cenários da feature que e que realize a integração dos métodos da classe de desenvolvimento e uma classe step usando Given, When, Then com steps escrito em português onde deverão ser realizados os asserts dos steps da feature através de chamanda dos métodos criados na classe de validação
+                                    <pre><code id="copyable"> 
+ Crie os seguintes artefatos para testar a integração desta classe:
+
+<strong>1 - Feature em Gherkin (formato .feature):</strong> Uma feature em Gherkin que descreve cenários de teste para esta classe. Os cenários devem cobrir pelo menos os seguintes aspectos: [Liste pelo menos 3 cenários de teste relevantes, com exemplos de entrada e resultados esperados. Se possível, inclua casos positivos e negativos]. Use português nos steps.
+
+<strong>2 - Classe de Validação:</strong> Crie uma classe Java chamada [NomeDaClasseLida]Validator que contenha métodos de validação para cada cenário descrito na feature Gherkin. Esses métodos devem chamar os métodos correspondentes da classe [NomeDaClasseLida] e retornar true se o resultado for como esperado, e false caso contrário (ou lançar uma exceção apropriada).
+
+<strong>3 - Classe de Steps (Cucumber ou outro framework):</strong> Crie uma classe de steps usando Cucumber que implemente os steps da feature Gherkin em português. Os steps devem chamar os métodos de validação da classe [NomeDaClasseLida]Validator e usar assertions para verificar os resultados.
                                     </code></pre>
                                 </div>
                                 <div id="popup" class="popup"><strong>Texto copiado!</strong></div>
@@ -367,36 +279,48 @@ Com base nas regras descritas no Syllabus CTFL-4.0, crie o plano de teste de aco
 
                                 <h4>cria-doc-qualidade</h4>
                                 <div class="code-block">
-                                        <pre><code id="copyable"> Crie a documentação de qualidade dos testes criados com base nesta lista combina as melhores práticas do Syllabus CTFL 4.0, ISO 29119 (Software Testing) e PMBOK (Project Management Body of Knowledge) para criar uma documentação de qualidade e testes robusta:
-<strong>1. Planejamento e Estratégia:</strong>
-    Defina o escopo: Identifique claramente os objetivos, requisitos e recursos da documentação.
-    Estabeleça um plano de teste: Defina os tipos de testes, níveis de teste, critérios de entrada e saída.
-    Gerencie os riscos: Identifique e analise os riscos relacionados à qualidade da documentação e dos testes.
-    Comunique o plano: Compartilhe o plano com as partes interessadas, garantindo clareza e consenso.
-<strong>2. Documentação de Requisitos:</strong>
-    Requisitos de teste: Documente os requisitos funcionais e não funcionais a serem testados.
-    Casos de teste: Crie casos de teste detalhados, incluindo passos, dados de entrada, resultados esperados e critérios de aprovação.
-    Cenários de teste: Descreva situações específicas, como cenários de erro ou de uso crítico, a serem testadas.
-    Documentação de requisitos do usuário: Documente os requisitos do usuário final, como interface, funcionalidade e usabilidade.
-<strong>3. Execução e Relato de Testes:</strong>
-    Gerenciamento de defeitos: Documente os defeitos encontrados durante os testes, incluindo descrição, passos para reprodução e gravidade.
-    Relatórios de teste: Gere relatórios completos e concisos, incluindo resumo dos testes, resultados, defeitos encontrados e recomendações.
-    Evidências de teste: Capture e armazene evidências de teste, como logs, screenshots e vídeos, para auditoria e revisão.
-    Rastreamento de defeitos: Utilize ferramentas de gerenciamento de defeitos para acompanhar o ciclo de vida dos defeitos, desde a identificação até a resolução.
-<strong>4. Boas Práticas de Documentação:</strong>
-    Clareza e concisão: Utilize linguagem clara, concisa e técnica.
-    Organização e estrutura: Apresente a informação de forma organizada e estruturada, utilizando tabelas, gráficos e títulos.
-    Padronização: Utilize templates e padrões de documentação para manter a consistência.
-    Revisão e aprovação: Revise e revise a documentação para garantir a precisão e a qualidade.
-    Atualização e controle de versões: Mantenha a documentação atualizada e controle as versões.
-<strong>5. Regras Específicas:</strong>
-    CTFL 4.0: Siga as diretrizes e os padrões estabelecidos no Syllabus CTFL 4.0 para documentação e testes.
-    ISO 29119: Adote as melhores práticas de testes de software, como testes de integração, sistema e aceitação, descritas na ISO 29119.
-    PMBOK: Utilize as ferramentas e técnicas de gerenciamento de projetos do PMBOK para gerenciar a documentação e os testes.
-<strong>6. Ferramentas e Recursos:</strong>
-    Ferramentas de teste: Utilize ferramentas de teste automatizado e de gerenciamento de defeitos.
-    Documentação online: Utilize plataformas online para armazenamento, compartilhamento e controle de versão da documentação.
-    Comunicação eficaz: Utilize ferramentas de comunicação para facilitar a colaboração e o feedback.
+                                        <pre><code id="copyable"> Crie a documentação completa de testes e a implementação dos testes.
+
+A documentação deve atender aos seguintes requisitos, fornecendo exemplos de código e casos de teste para cada item, alinhando-se às boas práticas do Syllabus CTFL 4.0 e ISO 29119:
+                                          
+    <strong> 1. Planejamento e Estratégia (alinhado com CTFL 4.0 - Planejamento e Controle de Testes):</strong>
+         <strong>Objetivo:</strong> Documentar e testar completamente a funcionalidade da classe fornecida, garantindo a conformidade com os requisitos e a qualidade do software.
+         <strong>Requisitos:</strong> Todos os métodos da classe devem ser testados exaustivamente, considerando requisitos funcionais e não funcionais (performance, segurança, usabilidade, etc.). A cobertura de código deve ser maximizada, buscando atingir um nível aceitável de acordo com as métricas definidas (ex: 80%).
+         <strong>Recursos:</strong> Linguagem de programação usada na classe, framework de testes (especifique se houver um preferido, caso contrário, sugira um adequado à linguagem – considerando a possibilidade de testes automatizados, como preconizado pela ISO 29119), ferramenta de documentação (ex: Sphinx, JSDoc). Defina recursos humanos envolvidos (roles e responsabilidades).
+         <strong>Plano de Teste:</strong> Descreva os tipos de teste a serem utilizados (unitários, de integração, se aplicável, seguindo a abordagem da ISO 29119 para a seleção de técnicas de teste), a abordagem de teste (test-driven development, se aplicável), os critérios de entrada (pré-condições para os testes) e saída (pós-condições esperadas), incluindo métricas de sucesso. Inclua um cronograma estimado e as atividades definidas no plano (alinhado com CTFL 4.0 - Gerenciamento de Testes).
+         <strong>Gerenciamento de Riscos:</strong> Identifique potenciais riscos, como complexidade da classe, dependências externas e possíveis problemas de performance. Descreva como esses riscos serão mitigados, incluindo planos de contingência (alinhado com CTFL 4.0 - Gerenciamento de Riscos). Utilize técnicas de análise de risco e priorização de riscos.
+    
+    <strong> 2. Documentação de Requisitos (alinhado com ISO 29119 - Especificação de Testes):</strong>
+        <strong>Requisitos de teste (ISO 29119):</strong> Liste os requisitos funcionais e não funcionais da classe, incluindo comportamento esperado para cada método, tratamento de erros e restrições de performance (se aplicável). Especifique os critérios de teste com clareza.
+        <strong>Casos de Teste (ISO 29119):</strong> Para cada método da classe, crie casos de teste detalhados com identificador único, descrição concisa, premissas, passos de execução, dados de entrada esperados, resultados esperados, critérios de aprovação/reprovação e o método de teste a ser usado (ex: caixa preta/caixa branca). Considere casos de borda, valores limites, valores nulos e testes negativos.
+        <strong>Cenários de Teste (ISO 29119):</strong> Descreva cenários específicos, como tratamento de entradas inválidas, exceções, cenários de uso comuns e cenários de uso incomuns, considerando diferentes caminhos de execução.
+        <strong>Documentação de requisitos do usuário (se aplicável):</strong> Descreva como o usuário interagiria com a classe, caso ela seja parte de uma API ou interface. A documentação deve ser clara, concisa e acessível ao usuário final.
+                                          
+   <strong>3. Execução e Relato de Testes (alinhado com CTFL 4.0 - Execução de Testes e ISO 29119 - Execução de Testes):</strong>
+        <strong>Gerenciamento de Defeitos (ISO 29119):</strong> Descreva como os defeitos serão rastreados (ex: usando um sistema de rastreamento de bugs ou comentários no código). Inclua um exemplo de como documentar um defeito encontrado durante o teste, com detalhes como ID, descrição, severidade, prioridade, passos para reprodução, e ambiente de teste.
+        <strong>Relatórios de Teste (ISO 29119):</strong> Gere um relatório de teste detalhado incluindo resumo executivo, abrangência de testes, métricas (cobertura de código, taxa de defeitos), registro de execução dos testes (pass/fail), sumário de defeitos e recomendações. Este relatório deve seguir um formato consistente e padrão.
+        <strong>Evidências de teste (ISO 29119):</strong> Indique como as evidências de teste serão armazenadas (ex: logs, screenshots de falhas, vídeos). As evidências devem ser rastreáveis aos casos de teste específicos.
+        <strong>Rastreamento de Defeitos (ISO 29119):</strong> Explique como o processo de rastreamento de defeitos será executado, desde a sua detecção até a sua resolução, incluindo a definição de estados para defeitos (ex: aberto, em investigação, corrigido, verificado, fechado).
+                                          
+   <strong>4. Boas Práticas de Documentação (alinhado com CTFL 4.0 - Documentação de Testes):</strong>
+        <strong>Clareza e Concisão:</strong> A documentação deve ser clara, concisa e fácil de entender.
+        <strong>Organização e Estrutura:</strong> Utilize uma estrutura lógica para apresentar a informação (ex: Markdown ou reStructuredText).
+        <strong>Padronização:</strong> Siga um padrão de documentação consistente (ex: Google Style Guide para Python).
+        <strong>Padronização:</strong>Revisão e Aprovação: Indique como a revisão e aprovação da documentação serão realizadas, incluindo as roles e responsabilidades de cada participante da revisão. A revisão deve garantir a rastreabilidade dos requisitos aos casos de teste.
+        <strong>Atualização e Controle de Versões:</strong> Explique como a documentação será atualizada e controlada (ex: Git).
+                                          
+   <strong>5. Boas Práticas de Testes (alinhado com ISO 29119):</strong>
+        Inclua uma seção detalhando as técnicas de teste utilizadas, justificando sua escolha com base na natureza da classe e nos riscos identificados.
+        Descreva como os testes foram projetados para garantir a independência e a repetibilidade.
+        Documente qualquer suposição feita durante o processo de teste.
+                                          
+   <strong>6. Ferramentas e Recursos:</strong>
+        <strong>Ferramentas de teste:</strong> Especifique as ferramentas usadas (ex: pytest, JUnit, unittest).
+        <strong>Documentação online:</strong> Se uma plataforma online for usada, especifique qual.
+        <strong>A saída deve incluir:</strong>
+            A documentação da classe (ex: docstrings, comentários, README).
+            O código de teste unitário.
+            Um relatório de teste completo.
                                         </code></pre>
                             </div>
                             <div id="popup" class="popup"><strong>Texto copiado!</strong></div>
