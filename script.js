@@ -80,3 +80,40 @@ codeBlocks.forEach(function (codeBlock) {
     selection.removeAllRanges();
   });
 });
+
+// Exibir ou ocultar o botão ao rolar a página
+window.addEventListener("scroll", function () {
+  const backToTopButton = document.getElementById("backToTop");
+  if (window.pageYOffset > 100) {
+    backToTopButton.style.display = "flex"; // Mostra o botão
+  } else {
+    backToTopButton.style.display = "none"; // Esconde o botão
+  }
+});
+
+// Rolagem suave ao clicar no botão
+document
+  .getElementById("backToTop")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Rolagem suave
+    });
+  });
+
+// Obter o botão
+const backToProjectsButton = document.getElementById("backToProjects");
+
+// Verificar a URL da página atual
+const currentPage = window.location.pathname;
+
+// Lista de páginas onde o botão deve aparecer
+const pagesToShowButton = ["/quick-command.html", "/newman.html"];
+console.log("Script carregado com sucesso!");
+// Verificar se a página atual está na lista
+if (pagesToShowButton.includes(currentPage)) {
+  backToProjectsButton.style.display = "flex"; // Exibe o botão
+} else {
+  backToProjectsButton.style.display = "none"; // Garante que o botão esteja oculto
+}

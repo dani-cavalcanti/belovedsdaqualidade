@@ -35,10 +35,45 @@
   gap: 20px;
 }
 
+#backToTop {
+  position: fixed;
+  bottom: 40px; /* Distância da parte inferior da tela */
+  left: 8px; /* Distância do lado esquerdo da tela */
+  width: 20px; /* Largura do botão */
+  height: 20px; /* Altura do botão */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fundo branco com transparência */
+  color: black;
+  text-decoration: none;
+  border-radius: 50%; /* Torna o botão circular */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  display: none; /* Inicialmente escondido */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Garante que o botão fique acima do conteúdo */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+#backToTop:hover {
+  opacity: 1; /* Aumenta a opacidade ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+#backToTop i {
+  font-size: 20px; /* Tamanho do ícone */
+  color: black; /* Cor do ícone */
+}
+
 body {
   background-color: black;
   height: 100vh;
   padding-bottom: 40px;
+  position: relative;
+  margin-bottom: 60px;
 }
 
 .interface {
@@ -526,6 +561,33 @@ section .linkProject .flex {
 }
 
 /* ESTILO PÁGINA QUICK COMMAND */
+#backToProjects {
+  position: fixed;
+  top: 150px; /* Fixa o botão no topo da página */
+  right: 20px; /* Distância do lado direito */
+  display: none; /* Inicialmente oculto */
+  align-items: center;
+  gap: 8px; /* Espaço entre o ícone e o texto */
+  padding: 8px 15px;
+  color: #696969;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  font-size: 16px;
+  z-index: 1000; /* Garante que o botão fique acima do conteúdo */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#backToProjects:hover {
+  background-color: whitesmoke; /* Muda a cor ao passar o mouse */
+  transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+#backToProjects i {
+  font-size: 20px; /* Tamanho do ícone */
+  color: #696969; /* Cor do ícone */
+}
+
 section .doc-qc {
   padding: 40px 4%;
 }
