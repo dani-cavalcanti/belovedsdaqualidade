@@ -6,6 +6,35 @@
   font-family: "Poppins", sans-serif;
 }
 
+.alert {
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 20px auto;
+}
+.alert h1 {
+  text-align: center;
+}
+.alert p {
+  text-align: center;
+}
+.alert a {
+  color: #ff00ff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.alert img {
+  max-width: 350px;
+  display: block;
+  margin: 0 auto;
+  gap: 20px;
+}
+
 body {
   background-color: black;
   height: 100vh;
