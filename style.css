@@ -29,9 +29,12 @@
 }
 
 .alert img {
+  position: relative;
+  max-width: 600px;
   display: block;
   margin: 0 auto;
   gap: 20px;
+  animation: flutuar 2s ease-in-out infinite alternate;
 }
 
 #backToTop {
