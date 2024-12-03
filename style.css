@@ -7,6 +7,7 @@
 }
 
 .alert {
+  position: relative;
   padding: 5px;
   background-color: #333;
   color: white;
@@ -15,6 +16,7 @@
   border-radius: 5px;
   width: fit-content;
   margin: 20px auto;
+  justify-content: space-between;
 }
 .alert h1 {
   text-align: center;
@@ -27,7 +29,6 @@
   text-decoration: none;
   display: inline-block;
 }
-
 .alert img {
   position: relative;
   max-width: 600px;
@@ -35,6 +36,19 @@
   margin: 0 auto;
   gap: 20px;
   animation: flutuar 2s ease-in-out infinite alternate;
+}
+.alert .close-btn {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.alert .close-btn:hover {
+  color: #ff00ff;
 }
 
 #backToTop {

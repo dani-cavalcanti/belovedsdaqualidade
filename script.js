@@ -117,3 +117,8 @@ if (pagesToShowButton.includes(currentPage)) {
 } else {
   backToProjectsButton.style.display = "none"; // Garante que o botão esteja oculto
 }
+
+function closeBanner() {
+  const banner = document.getElementById("alert-banner");
+  banner.style.display = "none";
+}
